@@ -1,0 +1,14 @@
+@model MessageLogViewModel
+@{
+    ViewData["Title"] = "Add Message to the Messages Log";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="MessageLogContents"></label>
+        <textarea class="form-control" asp-for="MessageLogContents"></textarea>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Send" />
+</form>
